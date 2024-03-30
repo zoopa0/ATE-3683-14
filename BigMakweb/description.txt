@@ -1,0 +1,27 @@
+About The wireframe
+
+1. Bigmak logo This is the restaurant's the logo, positioned at the top-left name Corner of the page.
+
+2. Navigation menu. A horizontal menu bor located at the top right Corner Of the website Page Containing Inks to different Sections of
+
+3. Welcome Message: A welcoming message or brief introductas tu the restaurant placed belaw the navigator тени
+
+4. Featured disher Section A Sector with Popular images Showconsing featured odishes This Section highlights some of the vestaurant's Or Sensu data to Entice Visiters.
+
+5. Footer Section A forter caren louted at the Contaminy links to important pages like Social medin ceans for easy deces to the bottom of the page About us Contact us an restaurant's Sacs propier
+
+. This illustrates the wireframe of the homepu Like wipe contmues for the continued wireframes and the same
+
+The Site diagram Bigmak website. Ellustrates the hierorchical structive of the
+
+Homepage the main landing page of the website. teaturing navigation to essential sections & highlighting featured dishes
+
+Menu: sections for browsing the restaurant's menu with Subsections for different Catagories of dishes.
+
+• Order). Sectior for placing orders
+
+• About us Section providing information about the restaurant and the restaurant's history
+
+Contact us: Section for contacting the restaurant location information and an inquiry form including
+
+• Sign in this section allows Accounts Users to Sign in to their
