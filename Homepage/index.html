@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="logoAndNav">
+      <div class="logo">
+        <!-- Logo image -->
+        <img src="img/logo.jpg" alt="logo" />
+      </div>
+
+      <div class="burger-icon" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="navList">
+        <!-- Navigation links -->
+        <a href="" class="active">Home</a>
+        <a href="/Menu/menuPage.html">Menu</a>
+        <a href="">Order</a>
+        <a href="/About us/tyh.html">About Us</a>
+        <a href="/Contact/contact us .html">Contact Us</a>
+      </div>
+      <div class="loginbtn">
+        <!-- Login button -->
+        <a href="/loginbtn/login/login.html"><button class="loginbtn">Login</button></a>
+      </div>
+    </section>
+
+    <hr />
+    <!-- Slider Container -->
+
+    <div class="slider-container">
+      <div class="slider">
+        <!-- Slide 1 -->
+
+        <div class="slide">
+          <img src="img/img11.jpg" alt="Slide 1" />
+          <div class="slide-content">
+            <h1>Welcome! Selam</h1>
+            <h2>BigMak Ethiopian Restaurant</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              a culpa, nobis quaerat alias hic tempore expedita <br />
+              voluptates debitis, tenetur doloribus enim rerum, voluptas
+              molestiae nemo vero? Alias, dolores nam.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+
+        <div class="slide">
+          <img src="img/img2.jpg" alt="Slide 2" />
+          <div class="slide-content">
+            <h1>Welcome! Selam</h1>
+            <h2>BigMak Ethiopian Restaurant</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              a culpa, nobis quaerat alias hic tempore expedita <br />
+              voluptates debitis, tenetur doloribus enim rerum, voluptas
+              molestiae nemo vero? Alias, dolores nam.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+
+        <div class="slide">
+          <img src="img/img3.jpg" alt="Slide 3" />
+          <div class="slide-content">
+            <h1>Welcome! Selam</h1>
+            <h2>BigMak Ethiopian Restaurant</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              a culpa, nobis quaerat alias hic tempore expedita <br />
+              voluptates debitis, tenetur doloribus enim rerum, voluptas
+              molestiae nemo vero? Alias, dolores nam.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+
+        <div class="slide">
+          <img src="img/img4.jpg" alt="Slide 4" />
+          <div class="slide-content">
+            <h1>Welcome! Selam</h1>
+            <h2>BigMak Ethiopian Restaurant</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              a culpa, nobis quaerat alias hic tempore expedita <br />
+              voluptates debitis, tenetur doloribus enim rerum, voluptas
+              molestiae nemo vero? Alias, dolores nam.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+
+        <div class="slide">
+          <img src="img/img5.jpg" alt="Slide 5" />
+          <div class="slide-content">
+            <h1>Welcome! Selam</h1>
+            <h2>BigMak Ethiopian Restaurant</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              a culpa, nobis quaerat alias hic tempore expedita <br />
+              voluptates debitis, tenetur doloribus enim rerum, voluptas
+              molestiae nemo vero? Alias, dolores nam.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+
+      <button class="prev" onclick="prevSlide()">&lt</button>
+      <button class="next" onclick="nextSlide()">&gt</button>
+
+      <!-- Dots for navigation -->
+
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+    <div class="container"></div>
+    <h1
+      style="
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+      "
+    >
+      Our Best Food
+    </h1>
+    <div class="ourBestFood">
+      <!-- Food Cards -->
+
+      <div class="card1">
+        <img src="img/img3.jpg" alt="food image" />
+        <div class="imgTxt">
+          <h4>Habeshawi</h4>
+          <p style="color: gray">
+            This is the best food <br />
+            you will ever get.
+          </p>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="img/img3.jpg" alt="food image" />
+        <div class="imgTxt">
+          <h4>Pizza</h4>
+          <p style="color: gray">
+            This is the best food <br />
+            you will ever get.
+          </p>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="img/img3.jpg" alt="food image" />
+        <div class="imgTxt">
+          <h4>Chicken</h4>
+          <p style="color: gray">
+            This is the best food <br />
+            you will ever get.
+          </p>
+        </div>
+      </div>
+
+      <div class="card1">
+        <img src="img/img3.jpg" alt="food image" />
+        <div class="imgTxt">
+          <h4>Burger</h4>
+          <p style="color: gray">
+            This is the best food <br />
+            you will ever get.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2>BigMak</h2>
+                <h3>Ethiopian Restaurant</h3>
+                 <ul class="social-icons1">
+                    <li><a href="#"><img src="/About us/img/insta.jpg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="/About us/img/facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="/About us/img/twitter.jpg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="/About us/img/tg.jpg" alt="Telegram"></a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Homepage/index.html">Home</a></li>
+                  <li><a href="/Menu/menuPage.html">Menu</a></li>
+                  <li><a href="#">Order</a></li>
+                  <li><a href="/About us/tyh.html">About Us</a></li>
+                  <li><a href="/Contact/contact us .html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul><li><a href="#">Address</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone No</a></li>
+                </ul>  
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us On</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/"><img src="/About us/img/insta.jpg" alt="Instagram"><span>Instagram</span></a></li>
+                    <li><a href="https://twitter.com/"><img src="/About us/img/twitter.jpg" alt="Twitter"><span>Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/"><img src="/About us/img/facebook.jpg" alt="Facebook"><span>Facebook</span></a></li>
+                    <li><a href="https://web.telegram.org/k/"><img src="/About us/img/tg.jpg" alt="Telegram"><span>Telegram</span></a></li>
+                </ul>
+            </div>
+            <hr class="footer-line1">
+    <p class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nobis, rerum et expedita praesentium eaque dignissimos qui, ab cum delectus dolores iusto accusantium eveniet dolor doloremque, aut ducimus magni consectetur!</p>
+    <hr class="footer-line2">
+    <div class="footer-bottom">
+        <img src="/About us/img/logo.jpg" alt="Logo">
+        <p class="footer-copyright" ;">2024 Mikael Alemu All Rights Reserved</p>
+    </div>
+    
+            
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
