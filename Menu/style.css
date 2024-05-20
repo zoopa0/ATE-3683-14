@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #ffe251);
+}
+.logoAndNav {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: 55px;
+    padding: 15px;
+}
+
+.burger-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: none; /* Hide initially on larger screens */
+}
+
+.burger-icon .line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navList a {
+    display: block;
+    padding-left: 25px;
+    color: gray;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.navList a:hover {
+    padding-left: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.loginbtn {
+    margin-right: 80px;
+}
+.loginbtn a {
+    background-color: rgb(218, 198, 27);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1310px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 35px;
+        padding: 12px;
+    }
+
+    .navList {
+        margin-top: 10px;
+        gap: 70px;
+    }
+    
+    .navelist a {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+
+    .loginbtn,
+    .burger-icon {
+        order: 1; /* Move logo, login button, and burger icon to the top */
+    }
+
+    .navList {
+        display: none;
+        margin-top: 10px;
+        gap: 60px;
+    }
+    
+    .navelist a {
+        padding: 12px;
+    }
+
+    .burger-icon {
+        display: block; /* Show burger icon on smaller screens */
+        position: absolute; /* Position the burger icon */
+        top: 50px; /* Align with the top of the navbar */
+        right: 30px; /* Align with the right side of the navbar */
+    }
+    .navList.open {
+        display: flex;
+        justify-content: flex-end; /* Show navigation links when burger icon is clicked */
+        flex-direction: column;
+        background-color: linear-gradient(135deg, rgba(168, 168, 168, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 60%;
+        cursor: pointer;
+        overflow-y: hidden;
+        z-index: 99;
+        margin-left: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .navList.open a {
+        padding: 10px 0;
+        color: white;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    color: white;
+    width: 20%;
+    background-color: #322c10;
+    padding: 25px;
+  
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-item {
+    margin-top: 25px;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    font-size: x-large;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 45px 10px;
+    margin-bottom: 5px;
+    background-color: #ddd;
+    border-radius: 15px;
+}
+.food-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(48, 47, 47);
+  }
+
+
+.main-content {
+    color: white;
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.food-section {
+    flex: 1;
+    padding-top:50px;
+    padding-left: 50px;
+    display: none;
+    border: 1px solid #aaa6a6; /* Add border for visualization */
+}
+.food-section img {
+   border-radius: 25px;
+   margin: 0;
+   padding: 0;
+}
+
+.mainsec{
+    display: flex;
+    justify-content: space-around;
+}
+.food-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+footer {
+    background-color:black;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 1 1 300px; /* Adjust the flex properties for responsiveness */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space between columns */
+}
+.footer-column h2{
+    margin-bottom: -10px;
+}
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+    margin: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    color: #ccc;
+}
+.social-icons1 {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    margin-top: 50px;
+}
+
+.social-icons1 li {
+    margin: 0 5px; /* Adjust margin between items */
+}
+
+.social-icons1 img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.social-icons1 img:hover {
+    transform: scale(1.2); /* Add hover effect to scale up the icon */
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Display items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.social-icons li {
+    margin: 5px 0; /* Adjust margin between items */
+}
+
+.social-icons span {
+    margin-right: 5px; /* Add space between name and icon */
+}
+
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Add hover effect to scale up the icon */
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+}
+
+.footer-column a:hover {
+    color: yellow; /* Change text color on hover */
+}
+.footer-line1 {
+    width: 100%;
+    border-top: 1px solid #ccc; /* Adjust line style */
+    margin-top: 10px; /* Add space between footer and line */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.footer-line2 {
+    width: 100%;
+    border-top: 1px solid #ccc; /* Adjust line style */
+    margin-top: 100px; /* Add space between footer and line */
+}
+
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px; /* Add space between line and paragraph */
+    color: white;
+}
+
+/* Existing CSS code */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-top: 10px; /* Add space between paragraph and bottom content */
+}
+
+.footer-bottom img {
+    max-width: 100px; /* Adjust logo size */
+    order: -5; /* Change the order of the logo to appear first */
+}
+
+.footer-copyright {
+    font-size: 12px; /* Adjust font size */
+    color: #777; /* Adjust color */
+    margin-left: 900px; /* Push the copyright text to the right */
+    margin-top: -50px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    .footer-bottom {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .footer-bottom img {
+        order: 0; /* Reset the order to default */
+        margin-bottom: 10px; /* Add space between logo and copyright text */
+        margin-left: 70px;
+    }
+
+    .footer-copyright {
+        margin-left: 10px; /* Reset the left margin */
+        margin-top: 10px; /* Add space between logo and copyright text */
+    }
+}
