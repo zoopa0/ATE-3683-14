@@ -76,3 +76,5 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
     // Redirect to order summary page
     window.location.href = 'order-summary.html';
 });
+
+//smthn
