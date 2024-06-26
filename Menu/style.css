@@ -4,18 +4,19 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #000000, #ffe251);
 }
+
 .logoAndNav {
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding:0px 10px;
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     margin-left: 55px;
     padding: 15px;
@@ -39,17 +40,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 80px;
 }
 
-.navList a {
-    display: block;
-    padding-left: 25px;
-    color: gray;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 800;
-}
+
 .navList a:hover {
     padding-left: 25px;
     color: rgb(255, 255, 255);
@@ -141,7 +135,6 @@ body {
         color: white;
     }
 }
-
 .container {
     display: flex;
 }
