@@ -1,0 +1,706 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif; /* Set the font family for the entire document */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: black; /* Set the background color of the body */
+    color: #eee; /* Set the text color */
+}
+.logoAndNav {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: 55px;
+    padding: 15px;
+}
+
+.burger-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: none; /* Hide initially on larger screens */
+}
+
+.burger-icon .line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navList a {
+    display: block;
+    padding-left: 25px;
+    color: gray;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.navList a:hover {
+    padding-left: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.loginbtn {
+    margin-right: 80px;
+}
+.loginbtn a {
+    background-color: rgb(218, 198, 27);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1310px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 35px;
+        padding: 12px;
+    }
+
+    .navList {
+        margin-top: 10px;
+        gap: 70px;
+    }
+    
+    .navelist a {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+
+    .loginbtn,
+    .burger-icon {
+        order: 1; /* Move logo, login button, and burger icon to the top */
+    }
+
+    .navList {
+        display: none;
+        margin-top: 10px;
+        gap: 60px;
+    }
+    
+    .navelist a {
+        padding: 12px;
+    }
+
+    .burger-icon {
+        display: block; /* Show burger icon on smaller screens */
+        position: absolute; /* Position the burger icon */
+        top: 50px; /* Align with the top of the navbar */
+        right: 30px; /* Align with the right side of the navbar */
+    }
+    .navList.open {
+        display: flex;
+        justify-content: flex-end; /* Show navigation links when burger icon is clicked */
+        flex-direction: column;
+        background-color: linear-gradient(135deg, rgba(168, 168, 168, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 60%;
+        cursor: pointer;
+        overflow-y: hidden;
+        z-index: 99;
+        margin-left: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .navList.open a {
+        padding: 10px 0;
+        color: white;
+    }
+}
+
+
+/* Header section styles */
+.contact-header {
+    background-image: url('/Contact/img/photo_2024-05-11_09-47-47.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire header */
+    background-position: top; /* Position background at the top */
+    padding: 200px 0; /* Add padding top and bottom */
+    text-align: center; /* Center align text */
+    margin-bottom: 100px; /* Add bottom margin */
+}
+
+.contact-header h1 {
+    font-size: 36px; /* Set font size */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+.contact-header p {
+    font-size: 18px; /* Set font size */
+    color: whitesmoke; /* Set text color */
+}
+
+/* Main content section styles */
+.content {
+    display: flex; /* Display as flex */
+    justify-content: space-between; /* Space items evenly */
+}
+
+/* Left and right content styles */
+.left,
+.right {
+    width: 48%; /* Set width */
+}
+
+.left h2,
+.right h2 {
+    font-size: 24px; /* Set font size */
+    margin-bottom: 15px; /* Add bottom margin */
+    margin-left: 20px;
+}
+
+.left p,
+.right p {
+    font-size: 16px; /* Set font size */
+    color: #555; /* Set text color */
+    line-height: 1.5; /* Set line height */
+    margin-left: 20px;
+}
+
+/* Contact information pairs styles */
+.contact-pair {
+    display: flex; /* Display as flex */
+    margin-bottom: 20px; /* Add bottom margin */
+    margin-left: 20px;
+}
+
+.contact-info {
+    flex: 1; /* Distribute space evenly */
+    display:flex; /* Display as flex */
+    margin-right: 10px;
+}
+
+.icon{
+    margin-right: 10px; /* Add right margin */
+}
+
+.icon img {
+    width: 30px; /* Set image width */
+    height: 30px; /* Set image height */
+}
+
+.details h3 {
+    font-size: 18px; /* Set font size */
+   
+}
+
+.details p {
+    font-size: 16px; /* Set font size */
+    color: #555; /* Set text color */
+    
+}
+
+.right form {
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+.form-group label {
+    display: block; /* Display as block */
+    font-size: 18px;
+    color: white; /* Set font size */
+    margin-bottom: 5px; /* Add bottom margin */
+    margin-right: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    color: white3;
+    width: 90%; /* Set width */
+    padding: 10px; /* Add padding */
+    border: 1px solid #333; /* Add border */
+    background-color: rgb(31 41 55); /* Set background color */
+    border-color: rgb(3 7 18); /* Set background color */
+    border-width: 1px; /* Set background color */
+    border-radius: 5px; /* Add border radius */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 10px; /* Add bottom margin */
+    margin-right: 20px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize */
+}
+
+button[type="submit"] {
+    background-color: orange; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Set cursor */
+    transition: background-color 0.3s ease; /* Add transition */
+    font-size: 16px; /* Set font size */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Map section styles */
+.map {
+    text-align: center; /* Center align text */
+    margin-top: 30px; /* Add top margin */
+}
+
+.map iframe {
+    width: 90%; /* Set width */
+    max-width: 100%; /* Set maximum width */
+    height: 400px; /* Set height */
+    border: none; /* Remove border */
+}
+
+/* Footer section styles */
+.footer-content {
+    display: flex; /* Display as flex */
+    justify-content: space-between; /* Space items evenly */
+    align-items: flex-start; /* Align items at the start */
+}
+
+.updates {
+    background-color: orange; /* Set background color */
+    display: flex; /* Display as flex */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items at the center */
+    padding: 20px; /* Add padding */
+    width: 100%; /* Set width */
+}
+
+.updates-left {
+    margin-bottom: 10px; /* Add bottom margin */
+   
+}
+
+.updates h3 {
+    font-size: 20px; /* Set font size */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Add bottom margin */
+    margin-left: 25px; /* Add left margin */
+    color: black; /* Set text color */
+}
+
+.updates p {
+    font-size: 16px; /* Set font size */
+    color: #fff; /* Set text color */
+    margin-bottom: 20px; /* Add bottom margin */
+    margin-left: 25px; /* Add left margin */
+}
+
+.updates form {
+    display: flex; /* Display as flex */
+    align-items: center; /* Align items at the center */
+    margin-right: 25px; /* Add right margin */
+}
+
+.updates input[type="email"] {
+    width:500px; /* Set width */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    font-size: 16px; /* Set font size */
+    margin-right: 5px; /* Add right margin */
+    background-color: #fff; /* Set background color */
+}
+
+.updates button[type="submit"] {
+    width: calc(30% - 10px); /* Calculate width */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Set cursor */
+    transition: background-color 0.3s ease; /* Add transition */
+    font-size: 16px; /* Set font size */
+    background-color: black; /* Set background color */
+    color: #fff; /* Set text color */
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Media query for smaller screens */
+    .container{
+        font-size: 14px;
+        width: 100%;
+    }
+    .content{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left{
+        order: 1;
+        width:100%;
+    }
+    .right{
+        order: 2;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .map{
+        order: 3;
+    }
+    footer{
+        order: 4;
+    }
+    .updates {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items at the start */
+    }
+
+    .updates form {
+        margin-top: 10px; /* Add top margin */
+    }
+
+    .updates input[type="email"] {
+        width: 100%; /* Set width */
+        margin-right: 10px; /* Remove right margin */
+        margin-left: 100px;
+      
+    }
+
+    .updates button[type="submit"] {
+        width: 100%; /* Set width */
+        margin-top: 0px; /* Add top margin */
+    }footer {
+        background-color:black;
+        color: white;
+        padding: 20px 0;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .footer-column {
+        flex: 1 1 300px; /* Adjust the flex properties for responsiveness */
+        text-align: center;
+        margin-bottom: 20px; /* Add some space between columns */
+    }
+    .footer-column h2{
+        margin-bottom: -10px;
+    }
+    .footer-column h3 {
+        margin-bottom: 10px;
+    }
+    
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 5px;
+        margin: 10px;
+    }
+    
+    .footer-column p {
+        margin: 5px 0;
+        color: #ccc;
+    }
+    .social-icons1 {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        margin-top: 50px;
+    }
+    
+    .social-icons1 li {
+        margin: 0 5px; /* Adjust margin between items */
+    }
+    
+    .social-icons1 img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease; /* Add transition for hover effect */
+    }
+    
+    .social-icons1 img:hover {
+        transform: scale(1.2); /* Add hover effect to scale up the icon */
+    }
+    
+    
+    .social-icons {
+        display: flex;
+        flex-direction: column; /* Display items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .social-icons li {
+        margin: 5px 0; /* Adjust margin between items */
+    }
+    
+    .social-icons span {
+        margin-right: 5px; /* Add space between name and icon */
+    }
+    
+    
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease; /* Add transition for hover effect */
+    }
+    
+    .social-icons img:hover {
+        transform: scale(1.2); /* Add hover effect to scale up the icon */
+    }
+    
+    .footer-column a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Add transition for hover effect */
+    }
+    
+    .footer-column a:hover {
+        color: yellow; /* Change text color on hover */
+    }
+    .footer-line1 {
+        width: 100%;
+        border-top: 1px solid #ccc; /* Adjust line style */
+        margin-top: 10px; /* Add space between footer and line */
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .footer-line2 {
+        width: 100%;
+        border-top: 1px solid #ccc; /* Adjust line style */
+        margin-top: 100px; /* Add space between footer and line */
+    }
+    
+    .footer-paragraph {
+        text-align: center;
+        margin-top: 20px; /* Add space between line and paragraph */
+        color: white;
+    }
+    
+    /* Existing CSS code */
+    
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Align items vertically */
+        margin-top: 10px; /* Add space between paragraph and bottom content */
+    }
+    
+    .footer-bottom img {
+        max-width: 100px; /* Adjust logo size */
+        order: -5; /* Change the order of the logo to appear first */
+    }
+    
+    .footer-copyright {
+        font-size: 12px; /* Adjust font size */
+        color: #777; /* Adjust color */
+        margin-left: 900px; /* Push the copyright text to the right */
+        margin-top: -50px;
+    }
+    
+    /* Media query for smaller screens */
+    @media (max-width: 700px) {
+        .footer-bottom {
+            flex-direction: column; /* Change to column layout for smaller screens */
+            align-items: flex-start; /* Align items to the left */
+        }
+    
+        .footer-bottom img {
+            order: 0; /* Reset the order to default */
+            margin-bottom: 10px; /* Add space between logo and copyright text */
+            margin-left: 70px;
+        }
+    
+        .footer-copyright {
+            margin-left: 10px; /* Reset the left margin */
+            margin-top: 10px; /* Add space between logo and copyright text */
+        }
+    }
+}
+
+footer {
+    background-color:black;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 1 1 300px; /* Adjust the flex properties for responsiveness */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space between columns */
+}
+.footer-column h2{
+    margin-bottom: -10px;
+}
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+    margin: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    color: #ccc;
+}
+.social-icons1 {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    margin-top: 50px;
+}
+
+.social-icons1 li {
+    margin: 0 5px; /* Adjust margin between items */
+}
+
+.social-icons1 img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.social-icons1 img:hover {
+    transform: scale(1.2); /* Add hover effect to scale up the icon */
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Display items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.social-icons li {
+    margin: 5px 0; /* Adjust margin between items */
+}
+
+.social-icons span {
+    margin-right: 5px; /* Add space between name and icon */
+}
+
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Add hover effect to scale up the icon */
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+}
+
+.footer-column a:hover {
+    color: yellow; /* Change text color on hover */
+}
+.footer-line1 {
+    width: 100%;
+    border-top: 1px solid #ccc; /* Adjust line style */
+    margin-top: 10px; /* Add space between footer and line */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.footer-line2 {
+    width: 100%;
+    border-top: 1px solid #ccc; /* Adjust line style */
+    margin-top: 100px; /* Add space between footer and line */
+}
+
+.footer-paragraph {
+    text-align: center;
+    margin-top: 20px; /* Add space between line and paragraph */
+    color: white;
+}
+
+/* Existing CSS code */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-top: 10px; /* Add space between paragraph and bottom content */
+}
+
+.footer-bottom img {
+    max-width: 100px; /* Adjust logo size */
+    order: -5; /* Change the order of the logo to appear first */
+}
+
+.footer-copyright {
+    font-size: 12px; /* Adjust font size */
+    color: #777; /* Adjust color */
+    margin-left: 900px; /* Push the copyright text to the right */
+    margin-top: -50px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    .footer-bottom {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .footer-bottom img {
+        order: 0; /* Reset the order to default */
+        margin-bottom: 10px; /* Add space between logo and copyright text */
+        margin-left: 70px;
+    }
+
+    .footer-copyright {
+        margin-left: 10px; /* Reset the left margin */
+        margin-top: 10px; /* Add space between logo and copyright text */
+    }
+}

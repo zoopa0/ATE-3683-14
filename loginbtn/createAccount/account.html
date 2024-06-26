@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <section class="createAccount">
+      <div class="heroImg">
+        <div class="heroImgGradiant">
+          <a href="/">
+            <img
+              src="./icons/logo-white.svg"
+              alt="logo"
+              width="{250}"
+              height="{23}"
+              class="logo"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="formWrapper">
+        <div class="formContainer">
+          <div class="formTitle">
+            <h3>Create Account</h3>
+            <img
+              src="./icons/hand.png"
+              alt="hand"
+              width="{30}"
+              height="{30}"
+              class="hand"
+            />
+          </div>
+          <p>Please enter details</p>
+          <form onSubmit class="form" id="registrationForm">
+            <p>
+              This is where new customers can signup and create a new account.
+              To manage all users,
+              <a href="/admin/collections/users"
+                >login to the admin dashboard.</a
+              >
+            </p>
+            <h1 class="inputLabel">Email Address *</h1>
+            <input
+              name="email"
+              id="email"
+              label="Email Address"
+              required
+              register="{register}"
+              type="email"
+              class="input"
+            />
+            <h1 class="inputLabel">Full Name *</h1>
+            <input
+              name="name"
+              id="fullName"
+              label="Full name"
+              required
+              register="{register}"
+              error="{errors.name}"
+              type="text"
+              class="input"
+            />
+            <h1 class="inputLabel">Password *</h1>
+            <input
+              name="password"
+              id="password"
+              type="password"
+              label="Password"
+              required
+              register="{register}"
+              class="input"
+            />
+            <h1 class="inputLabel">Confirm Password *</h1>
+            <input
+              name="passwordConfirm"
+              id="passwordConfirm"
+              type="password"
+              label="Confirm Password"
+              required
+              register="{register}"
+              class="input"
+            />
+            <button
+              type="submit"
+              label="Sign up"
+              disabled="{loading}"
+              appearance="primary"
+              class="submit"
+            >
+              Sigin up
+            </button>
+            <div>
+              Already have an account?
+              <a href="../login/login.html" class="loginLink">Login</a>
+              <a href="/Homepage/index.html">Continue without login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

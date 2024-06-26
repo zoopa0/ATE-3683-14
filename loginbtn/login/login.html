@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <section class="login">
+      <div class="heroImg">
+        <div class="heroImgGradiant">
+          <a href="/">
+          <img
+            src="./icons/logo-white.svg"
+            alt="Logo"
+            height={23}
+            width={250}
+            class="logo"
+          />
+          </a>
+        </div>
+      </div>
+      <div class="formWrapper">
+        <div class="formContainer">
+          <!-- <RenderParams className="params" />  -->
+          <div class="formTitle">
+            <h3>Welcome</h3>
+            <img src="./icons/hand.png" alt="hand" width="30" height="30" />
+          </div>
+          <p>Please login here</p>
+          <form onSubmit="handleSubmit" class="form">
+            <!-- <Message error={error} className={classes.message} /> -->
+            <div class="inputBox">
+              <h1 class="inputLabel">Email Adrdress <span class="star">*</span></h1>
+              <Input name="email" label="Email Address" required register={register} class="input" type="email" />
+            </div>
+            <div class="inputBox">
+              <h1 class="inputLabel">Password <span class="star">*</span></h1>
+              <Input name="password" type="password" label="Password" required register={register} class="input" />
+            </div>
+            <button type="submit" appearance="primary" label="isLoading" disabled="isLoading"class="submit">
+              Login
+            </button>
+            <div class="links">
+              <a href="../createAccount/account.html" class="linkText">Create an account</a>
+              <br />
+              <a href="/loginbtn/login/recover/recover.html" class="linkText">Recover your password</a>
+              <a href="/Homepage/index.html">Continue without login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section> 
+  </body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--nav bar-->
+    <section class="logoAndNav">
+      <div class="logo">
+        <!-- Logo image -->
+        <img src="/Homepage/img/cf9b6e2b1adb4e2990d01cd3140f2419.png" alt="logo" />
+      </div>
+
+      <div class="burger-icon" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="navList">
+        <!-- Navigation links -->
+        <a href="/Homepage/index.html" class="active">Home</a>
+        <a href="/Menu/menuPage.html">Menu</a>
+        <a href="/Menu/order-summary.html">Order</a>
+        <a href="/About us/tyh.html">About Us</a>
+        <a href="/Contact/contact us .html">Contact Us</a>
+      </div>
+      
+      <div class="loginbtn">
+        <!-- Login button -->
+        <a href="/loginbtn/login/login.html">Login</a>
+      </div>
+    </section>
+    <hr>
+    <div class="container">
+      <div class="sidebar">
+        <div class="text">
+          <h1>BigMak Ethiopian Restaurant</h1>
+          <div class="location">
+            <i class="fa-solid fa-location-dot" style="padding-right: 5px"></i>
+            <span>Address Addis Ababa</span>
+          </div>
+          <br />
+          <div class="time">
+            <i class="fa-solid fa-phone" style="padding-right: 5px"></i>
+            <span>+25191234567</span>
+            <i
+              class="fa-solid fa-clock"
+              style="padding-lefxt: 20px; padding-right: 5px"
+            ></i>
+            <span>7am -5pm</span>
+          </div>
+        </div>
+        <ul>
+          <li class="food-item" data-food="pizza" id="pizza" style="background-image: url(img/piz.jpg);">Pizza</li>
+          <li class="food-item" data-food="burger" id="burger" style="background-image: url(img/burgerbutt.jfif);">Burger</li>
+          <li class="food-item" data-food="salad" id="salad" style="background-image: url(img/4.jpg);">Salad</li>
+          <li class="food-item" data-food="chicken" id="chicken" style="background-image: url(img/3.jpg);">Chicken</li>
+          <li class="food-item" data-food="habeshawi" id="habeshawi" style="background-image: url(img/beyaynetspecial.jfif);">Habeshawi</li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div id="pizza" class="food-section">
+
+          <!--pizza Section-->
+
+          <div class="mainsec">
+            <div class="fooditem1">
+              <div class="delicious">
+                <div class="food">
+                  <img
+                    src="img/piz.jpg"
+                    alt="unk"
+                    style="width: 200px; height: 200px"
+                  />
+                  <div class="foodtext1">
+                    
+                    <p> Pizza <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                    
+                    <button class="order-btn" data-food="Veg Burger" data-price="15" data-image="img/piz.jpg">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+                </div>
+        
+                  </div>
+
+                
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/imgpizza.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px; "
+                />
+                <div class="foodtext1">
+                
+                  <p>Vegan Pizza <br> <span style="font-size:large; font-weight: bolder; color: yellow; ">Price:$10</span></p>
+
+                  <button class="order-btn" data-food="Vegan Pizaa" data-price="10" data-image="img/imgpizza.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/normalpizza.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p>Normal Pizza <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:5$</span></p>
+
+                  <button class="order-btn" data-food="Normal pizza" data-price="5" data-image="img/normalpizza.jfif">Order</button>
+                  <span class="quantity-badge">0</span>
+      
+                </div>
+              </div>
+            </div>
+            <div class="fooditem2">
+              <div class="delicious">
+                <img
+                  src="img/supremepizza.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <div class="foodtext1">
+                    
+                    <p>Special Pizza <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:20$</span></p>
+
+                    <button class="order-btn" data-food="Special pizza" data-price="20" data-image="img/supremepizza.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/pizzamm.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  
+                  <p>Just a Pizza<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+
+                  <button class="order-btn" data-food="just pizza" data-price="15" data-image="img/pizzamm.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/pizzaunk.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p>Unknown Pizza <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+
+                  <button class="order-btn" data-food="just pizza" data-price="15" data-image="img/pizzaunk.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--for burger-->
+        <div id="burger" class="food-section">
+          <div class="mainsec">
+            <div class="fooditem1">
+              <div class="delicious">
+                <div class="food">
+                  <img
+                    src="img/specialburger.jfif"
+                    alt="unk"
+                    style="width: 200px; height: 200px"
+                  />
+                  <div class="foodtext1">
+                    
+                    <p>Special Burger<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:20$</span></p>
+                    <button class="order-btn" data-food="Special pizza" data-price="20" data-image="img/specialburger.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/crispyburger.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px; margin-top: 0px; padding-top: 0px;"
+                />
+                <div class="foodtext1">
+                
+                  <p>crispy Burger <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:15$</span></p>
+                  <button class="order-btn" data-food="crispy burger" data-price="15" data-image="img/crispyburger.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/burgeravocado.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <h2>Burger</h2>
+                  <p>Avocado burger <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:18$</span></p>
+                  <button class="order-btn" data-food="Avocado burger" data-price="18" data-image="img/burgeravocado.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+            <div class="fooditem2">
+              <div class="delicious">
+                <img
+                  src="img/breakfastburger.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <div class="foodtext1">
+                   
+                    <p>Fast Burger<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$18</span></p>
+                    <button class="order-btn" data-food="Breakfast burger" data-price="18" data-image="img/breakfastburger.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/burgerbutt.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+             
+                  <p>Normal burger <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:10$</span></p>
+                  <button class="order-btn" data-food="Normal burger" data-price="10" data-image="img/burgerbutt.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/steakburger.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <h2>Burger</h2>
+                  <p>Steak burger<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:20$</span></p>
+                  <button class="order-btn" data-food="Steak Burger" data-price="20" data-image="img/steakburger.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--for salad-->
+        <div id="salad" class="food-section">
+          <div class="mainsec">
+            <div class="fooditem1">
+              <div class="delicious">
+                <div class="food">
+                  <img
+                    src="img/salad1.jfif"
+                    alt="unk"
+                    style="width: 200px; height: 200px"
+                  />
+                  <div class="foodtext1">
+                  
+                    <p> Salad <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                    <button class="order-btn" data-food="Salad" data-price="5$" data-image="img/salad1.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/salad 2.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                
+                  <p> Salad 2 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:6$</span></p>
+                  <button class="order-btn" data-food="Salad 2" data-price="6$" data-image="img/salad 2.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/salad3.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  
+                  <p>Salad 3 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:10$</span></p>
+                  <button class="order-btn" data-food="Salad 3" data-price="6" data-image="img/salad3.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+            <div class="fooditem2">
+              <div class="delicious">
+                <img
+                  src="img/salad4.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <div class="foodtext1">
+                    
+                    <p>Salad 4 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:8$</span></p>
+                    <button class="order-btn" data-food="Salad 4" data-price="8" data-image="img/salad4.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/salad5.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+               
+                  <p> Salad 4 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                  <button class="order-btn" data-food="Salad 5" data-price="7" data-image="img/salad5.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/salad6.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p>Salad 6 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:8$</span></p>
+                  <button class="order-btn" data-food="Salad 6" data-price="8" data-image="img/salad6.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+                  
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--this is for chicken-->
+        <div id="chicken" class="food-section">
+          <div class="mainsec">
+            <div class="fooditem1">
+              <div class="delicious">
+                <div class="food">
+                  <img
+                    src="img/chicken1.jfif"
+                    alt="unk"
+                    style="width: 200px; height: 200px"
+                  />
+                  <div class="foodtext1">
+                    
+                    <p> Chicken 1 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:10$</span></p>
+                    <button class="order-btn" data-food="Chicken 1" data-price="10" data-image="img/chicken1.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/chicken2.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p> Chicken 2 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:12$</span></p>
+                  <button class="order-btn" data-food="Chicken 2" data-price="12" data-image="img/chicken2.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/chicken3.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+               
+                  <p>Chicken 3 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$17</span></p>
+                  <button class="order-btn" data-food="Chicken 3" data-price="17" data-image="img/chicken3.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+            <div class="fooditem2">
+              <div class="delicious">
+                <img
+                  src="img/chicken5.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <div class="foodtext1">
+                 
+                    <p> Chicken 4 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:11$</span></p>
+
+                    <button class="order-btn" data-food="Chicken 4" data-price="11" data-image="img/chicken5.jfif">Order</button>
+                   <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+        
+                  </div>
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/chicken6.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  
+                  <p>Chicken 5 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                  <button class="order-btn" data-food="Chicken 5" data-price="15" data-image="img/chicken6.jfif">Order</button>
+                   <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/3.jpg"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p> Chicken 6 <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                  <button class="order-btn" data-food="Chicken 6" data-price="15" data-image="img/3.jpg">Order</button>
+                   <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--for habeshawi-->
+
+
+        <div id="habeshawi" class="food-section">
+          <div class="mainsec">
+            <div class="fooditem1">
+              <div class="delicious">
+                <div class="food">
+                  <img
+                    src="img/kitfo.jfif"
+                    alt="unk"
+                    style="width: 200px; height: 200px"
+                  />
+                  <div class="foodtext1">
+                    
+                    <p>kitfo<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:18$</span></p>
+                    <button class="order-btn" data-food="Kitfo" data-price="18" data-image="img/kitfo.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+       
+        
+                  </div>
+
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/beyaynet.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                 
+                  <p>Beyaynet <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:$15</span></p>
+                  <button class="order-btn" data-food="Beyaynet" data-price="15" data-image="img/beyaynet.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+     
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/rawmeat.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+               
+                  <p>Kurt <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:20$</span></p>
+                  <button class="order-btn" data-food="Kurt" data-price="20" data-image="img/rawmeat.jfi">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+     
+      
+                </div>
+              </div>
+            </div>
+            <div class="fooditem2">
+              <div class="delicious">
+                <img
+                  src="img/beyaynetspecial.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  <div class="foodtext1">
+                  
+                    <p>special beyaynet <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:10$</span></p>
+                    <button class="order-btn" data-food="Special Beyaynet" data-price="10" data-image="img/beyaynetspecial.jfif">Order</button>
+                    <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+       
+        
+                  </div>
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/tibs.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  
+                  <p> Tibs<br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:11$</span></p>
+                  <button class="order-btn" data-food="Tibs" data-price="11" data-image="img/tibs.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+     
+      
+                </div>
+              </div>
+              <div class="delicious">
+                <img
+                  src="img/rawmeat.jfif"
+                  alt="unk"
+                  style="width: 200px; height: 200px"
+                />
+                <div class="foodtext1">
+                  
+                  <p>Raw Meat <br> <span style="font-size:large; font-weight: bolder; color: yellow;">Price:18$</span></p>
+                  <button class="order-btn" data-food="Raw Meat " data-price="18" data-image="img/rawmeat.jfif">Order</button>
+                  <span class="quantity-badge">0</span> <!-- Quantity badge initially set to 0 -->
+     
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="checkout-btn" id="checkoutButton">Checkout</button>
+      </div>
+    </div>
+
+    <!--THis is the footer-->
+    
+   
+    <footer>
+      <div class="footer-container">
+          <div class="footer-column">
+              <h2>BigMak</h2>
+              <h3>Ethiopian Restaurant</h3>
+               <ul class="social-icons1">
+                  <li><a href="#"><img src="/About us/img/insta.jpg" alt="Instagram"></a></li>
+                  <li><a href="#"><img src="/About us/img/facebook.jpg" alt="Facebook"></a></li>
+                  <li><a href="#"><img src="/About us/img/twitter.jpg" alt="Twitter"></a></li>
+                  <li><a href="#"><img src="/About us/img/tg.jpg" alt="Telegram"></a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="/Homepage/index.html">Home</a></li>
+                <li><a href="/Menu/menuPage.html">Menu</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="/About us/tyh.html">About Us</a></li>
+                <li><a href="/Contact/contact us .html">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Contact Us</h3>
+              <ul><li><a href="#">Address</a></li>
+                  <li><a href="#">Email</a></li>
+                  <li><a href="#">Phone No</a></li>
+              </ul>  
+          </div>
+          <div class="footer-column">
+              <h3>Follow Us On</h3>
+              <ul class="social-icons">
+                  <li><a href="https://www.instagram.com/"><img src="/About us/img/insta.jpg" alt="Instagram"><span>Instagram</span></a></li>
+                  <li><a href="https://twitter.com/"><img src="/About us/img/twitter.jpg" alt="Twitter"><span>Twitter</span></a></li>
+                  <li><a href="https://www.facebook.com/"><img src="/About us/img/facebook.jpg" alt="Facebook"><span>Facebook</span></a></li>
+                  <li><a href="https://web.telegram.org/k/"><img src="/About us/img/tg.jpg" alt="Telegram"><span>Telegram</span></a></li>
+              </ul>
+          </div>
+          <hr class="footer-line1">
+  <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, obcaecati. Qui libero sint asperiores inventore et nihil rerum consequuntur ad quis a assumenda vitae eos vel perspiciatis dolores, placeat consequatur.</p>
+  <hr class="footer-line2">
+  <div class="footer-bottom">
+    <div class="logo">  <img src="/Homepage/img/cf9b6e2b1adb4e2990d01cd3140f2419.png" alt="logo" class="logo" /></div>
+      <p class="footer-copyright" ;">2024 Mikael Alemu All Rights Reserved</p>
+  </div>
+  
+          
+      </div>
+  </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

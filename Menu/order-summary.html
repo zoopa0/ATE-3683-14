@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <section class="logoAndNav">
+        <div class="logo">
+          <img src="/Homepage/img/cf9b6e2b1adb4e2990d01cd3140f2419.png" alt="logo" />
+        </div>
+        <div class="burger-icon" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="navList">
+            <!-- Navigation links -->
+            <a href="/Homepage/index.html" class="active">Home</a>
+            <a href="/Menu/menuPage.html">Menu</a>
+            <a href="/Menu/order-summary.html">Order</a>
+            <a href="/About us/tyh.html">About Us</a>
+            <a href="/Contact/contact us .html">Contact Us</a>
+          </div>
+          
+        <div class="loginbtn">
+          <a href="/loginbtn/login/login.html">Login</a>
+        </div>
+    </section>
+    <h1 style="color: rgb(207, 197, 10);">Your Order Summary</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody id="orderTableBody">
+            <!-- Items will be added here dynamically -->
+        </tbody>
+    </table>
+    <div class="total">
+        <span>Grand Total:</span> <span id="grandTotal">0$</span>
+    </div>
+    <button class="orderbtn">Order</button>
+    <hr>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2>BigMak</h2>
+                <h3>Ethiopian Restaurant</h3>
+                <ul class="social-icons1">
+                    <li><a href="#"><img src="/About us/img/insta.jpg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="/About us/img/facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="/About us/img/twitter.jpg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="/About us/img/tg.jpg" alt="Telegram"></a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Homepage/index.html">Home</a></li>
+                    <li><a href="/Menu/menuPage.html">Menu</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="/About us/tyh.html">About Us</a></li>
+                    <li><a href="/Contact/contact us .html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone No</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us On</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/"><img src="/About us/img/insta.jpg" alt="Instagram"><span>Instagram</span></a></li>
+                    <li><a href="https://twitter.com/"><img src="/About us/img/twitter.jpg" alt="Twitter"><span>Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/"><img src="/About us/img/facebook.jpg" alt="Facebook"><span>Facebook</span></a></li>
+                    <li><a href="https://web.telegram.org/k/"><img src="/About us/img/tg.jpg" alt="Telegram"><span>Telegram</span></a></li>
+                </ul>
+            </div>
+            <hr class="footer-line1">
+            <p class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nobis, rerum et expedita praesentium eaque dignissimos qui, ab cum delectus dolores iusto accusantium eveniet dolor doloremque, aut ducimus magni consectetur!</p>
+            <hr class="footer-line2">
+            <div class="footer-bottom">
+                <div class="logo"><img src="/Homepage/img/cf9b6e2b1adb4e2990d01cd3140f2419.png" alt="logo" class="logo" /></div>
+                <p class="footer-copyright">2024 Mikael Alemu All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderTableBody = document.getElementById("orderTableBody");
+            let grandTotal = 0;
+    
+            // Retrieve selected items from localStorage
+            let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+            let itemMap = new Map();
+    
+            // Loop through selected items to populate the map
+            selectedItems.forEach(item => {
+                const { foodItem, foodImage, foodPrice, quantity } = item;
+                if (itemMap.has(foodItem)) {
+                    let existingItem = itemMap.get(foodItem);
+                    existingItem.quantity += quantity;  // Correctly add quantities
+                    existingItem.totalPrice += foodPrice * quantity;  // Correctly add total prices
+                } else {
+                    itemMap.set(foodItem, {
+                        foodImage: foodImage,
+                        foodPrice: foodPrice,
+                        quantity: quantity,
+                        totalPrice: foodPrice * quantity
+                    });
+                }
+            });
+    
+            // Display items from the map
+            itemMap.forEach((item, foodItem) => {
+                const { foodImage, foodPrice, quantity, totalPrice } = item;
+    
+                const orderRow = document.createElement("tr");
+    
+                const nameCell = document.createElement("td");
+                nameCell.textContent = foodItem;
+                orderRow.appendChild(nameCell);
+    
+                const imageCell = document.createElement("td");
+                const img = document.createElement("img");
+                img.src = foodImage;
+                img.style.width = "100px";
+                img.style.height = "100px";
+                imageCell.appendChild(img);
+                orderRow.appendChild(imageCell);
+    
+                const priceCell = document.createElement("td");
+                priceCell.textContent = `${foodPrice}$`;
+                orderRow.appendChild(priceCell);
+    
+                const quantityCell = document.createElement("td");
+                quantityCell.textContent = quantity;  // Correct quantity
+                orderRow.appendChild(quantityCell);
+    
+                const totalPriceCell = document.createElement("td");
+                totalPriceCell.textContent = `${totalPrice}$`;
+                orderRow.appendChild(totalPriceCell);
+    
+                orderTableBody.appendChild(orderRow);
+    
+                // Calculate grand total
+                grandTotal += totalPrice;
+            });
+    
+            // Display grand total
+            document.getElementById("grandTotal").textContent = `${grandTotal}$`;
+    
+            // Clear localStorage after displaying order summary
+            localStorage.removeItem('selectedItems');
+        });
+    </script>
+    
+
+  
+</body>
+</html>
