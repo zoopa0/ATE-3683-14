@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form</title>
     <link rel="stylesheet" href="account.css" />
+    <script src="account.js"></script>
   </head>
   <body>
     <section class="createAccount">
@@ -34,7 +35,7 @@
             />
           </div>
           <p>Please enter details</p>
-          <form onSubmit class="form" id="registrationForm">
+          <form onSubmit class="form" id="signupForm">
             <p>
               This is where new customers can signup and create a new account.
               To manage all users,
@@ -86,6 +87,7 @@
             <button
               type="submit"
               label="Sign up"
+              id="submit"
               disabled="{loading}"
               appearance="primary"
               class="submit"
