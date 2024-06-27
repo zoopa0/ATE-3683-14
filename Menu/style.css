@@ -5,6 +5,8 @@ body {
     background: linear-gradient(to bottom, #000000, #ffe251);
 }
 
+
+ 
 .logoAndNav {
     background-color: black;
     color: white;
@@ -15,16 +17,18 @@ body {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: 55px;
+    padding: 15px;
 }
 
 .burger-icon {
     width: 30px;
     height: 20px;
     cursor: pointer;
-    display: none;
+    display: none; /* Hide initially on larger screens */
 }
 
 .burger-icon .line {
@@ -38,51 +42,105 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
 }
 
 .navList a {
+    display: block;
+    padding-left: 25px;
     color: gray;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 800;
 }
-
 .navList a:hover {
-    color: white;
+    padding-left: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
+.loginbtn {
+    margin-right: 80px;
+}
 .loginbtn a {
     background-color: rgb(218, 198, 27);
+    border: none;
     padding: 10px 40px;
     border-radius: 25px;
     color: black;
-    text-decoration: none;
+    cursor: pointer;
     font-size: 1.2rem;
     font-weight: 600;
+    text-decoration: none;
 }
 
-@media (max-width: 1150px) {
-    .burger-icon {
-        display: block;
+@media only screen and (max-width: 1310px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 35px;
+        padding: 12px;
     }
+
+    .navList {
+        margin-top: 10px;
+        gap: 70px;
+    }
+    
+    .navelist a {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .logo img {
+        border-radius: 50px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+
+    .loginbtn,
+    .burger-icon {
+        order: 1; /* Move logo, login button, and burger icon to the top */
+    }
+
     .navList {
         display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
+        margin-top: 10px;
+        gap: 60px;
+    }
+    
+    .navelist a {
+        padding: 12px;
+    }
+
+    .burger-icon {
+        display: block; /* Show burger icon on smaller screens */
+        position: absolute; /* Position the burger icon */
+        top: 50px; /* Align with the top of the navbar */
+        right: 30px; /* Align with the right side of the navbar */
     }
     .navList.open {
         display: flex;
+        justify-content: flex-end; /* Show navigation links when burger icon is clicked */
+        flex-direction: column;
+        background-color: linear-gradient(135deg, rgba(168, 168, 168, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 60%;
+        cursor: pointer;
+        overflow-y: hidden;
+        z-index: 99;
+        margin-left: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
     }
-    .navList a {
-        padding: 20px;
+
+    .navList.open a {
+        padding: 10px 0;
         color: white;
     }
 }
