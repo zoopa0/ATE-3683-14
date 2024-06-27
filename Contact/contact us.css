@@ -8,17 +8,19 @@ body {
 }
 
 
+ 
 .logoAndNav {
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px;
+    padding: 10px;
 }
+
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50px;
     margin-left: 55px;
     padding: 15px;
@@ -42,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
 }
 
 .navList a {
@@ -51,7 +53,7 @@ body {
     color: gray;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 .navList a:hover {
     padding-left: 25px;
@@ -144,8 +146,6 @@ body {
         color: white;
     }
 }
-
-
 /* Header section styles */
 .contact-header {
     background-image: url('/Contact/img/photo_2024-05-11_09-47-47.jpg'); /* Set background image */
@@ -246,7 +246,7 @@ body {
 input[type="text"],
 input[type="email"],
 textarea {
-    color: white3;
+    color: white;
     width: 90%; /* Set width */
     padding: 10px; /* Add padding */
     border: 1px solid #333; /* Add border */
