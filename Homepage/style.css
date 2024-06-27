@@ -1,18 +1,16 @@
-*{
-   margin: 0;
-   padding: 0;
-   font-family: poppins;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 body, html {
-    margin-right: 0px ; 
-    margin: 0;
-    padding: 0;
-    font-family: poppins;
     height: 100%;
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
-
 
 .logoAndNav {
     background-color: black;
@@ -24,18 +22,16 @@ body, html {
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    margin-left: 55px;
-    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .burger-icon {
     width: 30px;
     height: 20px;
     cursor: pointer;
-    display: none; /* Hide initially on larger screens */
+    display: none;
 }
 
 .burger-icon .line {
@@ -49,125 +45,60 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 80px;
 }
 
 .navList a {
-    display: block;
-    padding-left: 25px;
     color: gray;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 800;
-}
-.navList a:hover {
-    padding-left: 25px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    font-weight: 600;
 }
 
-.loginbtn {
-    margin-right: 80px;
+.navList a:hover {
+    color: white;
 }
+
 .loginbtn a {
     background-color: rgb(218, 198, 27);
-    border: none;
     padding: 10px 40px;
     border-radius: 25px;
     color: black;
-    cursor: pointer;
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
-    text-decoration: none;
 }
 
-@media only screen and (max-width: 1310px) {
-    .logo img {
-        border-radius: 50px;
-        margin-left: 35px;
-        padding: 12px;
-    }
-
-    .navList {
-        margin-top: 10px;
-        gap: 70px;
-    }
-    
-    .navelist a {
-        padding: 15px;
-    }
-}
-
-@media only screen and (max-width: 1150px) {
-    .logo img {
-        border-radius: 50px;
-        margin-left: 30px;
-        padding: 10px;
-    }
-
-    .loginbtn,
+@media (max-width: 1150px) {
     .burger-icon {
-        order: 1; /* Move logo, login button, and burger icon to the top */
+        display: block;
     }
-
     .navList {
         display: none;
-        margin-top: 10px;
-        gap: 60px;
-    }
-    
-    .navelist a {
-        padding: 12px;
-    }
-
-    .burger-icon {
-        display: block; /* Show burger icon on smaller screens */
-        position: absolute; /* Position the burger icon */
-        top: 50px; /* Align with the top of the navbar */
-        right: 30px; /* Align with the right side of the navbar */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
     .navList.open {
         display: flex;
-        justify-content: flex-end; /* Show navigation links when burger icon is clicked */
-        flex-direction: column;
-        background-color: linear-gradient(135deg, rgba(168, 168, 168, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(30px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 60%;
-        cursor: pointer;
-        overflow-y: hidden;
-        z-index: 99;
-        margin-left: 10rem;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
     }
-
-    .navList.open a {
-        padding: 10px 0;
+    .navList a {
+        padding: 20px;
         color: white;
     }
 }
-
-
-.slidecontent{
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    text-align: center; 
-}
-
-/* body css */
 
 .slider-container {
     position: relative;
     width: 100%;
     height: calc(100vh - 20px);
+    overflow: hidden;
 }
 
 .slider {
@@ -178,7 +109,6 @@ body, html {
 
 .slide {
     min-width: 100%;
-    flex: 1;
     position: relative;
 }
 
@@ -190,14 +120,11 @@ body, html {
 
 .slide-content {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    color: rgb(242, 238, 238);
-    padding: 90px;
-}
-
-h1, p {
-    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 
 .prev, .next {
@@ -224,14 +151,13 @@ h1, p {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    transition-duration: 10ms;
 }
 
 .dot {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -239,46 +165,44 @@ h1, p {
 
 .dot.active {
     background-color: #8d8d8d;
-}.ourBestFood {
-    padding: 25px 0px 45px 25px;
+}
+
+.ourBestFood {
+    padding: 25px;
     background-color: white;
     display: flex;
-    flex-wrap:wrap; /* Allow flex items to wrap onto multiple lines */
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.card1 img {
-    padding-top: 0px;
-    padding-bottom: 10px;
-    overflow: hidden;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-top: 0px;
-    height: 100%; /* Set image height to fill its container */
-    width: 100%; /* Set image width to fill its container */
-    object-fit: cover; /* Ensure the image covers the entire container */
-}
-
-.card1:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5); /* Change shadow on hover */
-}
-
 .card1 {
-    cursor: pointer;
     border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: calc(50% - 30px); /* Adjust width for smaller screens */
-    max-width: 230px; /* Limit width on larger screens */
-    margin-bottom: 20px; /* Add space between cards */
+    width: calc(50% - 30px);
+    max-width: 230px;
+    margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card1 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 .imgTxt {
@@ -287,30 +211,20 @@ h1, p {
     align-items: center;
 }
 
-/* This is to make it adapt on different screen */
-
-@media screen and (max-width: 768px) {
-    .ourBestFood {
-        padding: 25px 0px;
-    }
-    
+@media (max-width: 768px) {
     .card1 {
         width: calc(50% - 20px);
     }
 }
 
-@media screen and (max-width: 576px) {
-    .ourBestFood {
-        padding: 25px 0px;
-    }
-    
+@media (max-width: 576px) {
     .card1 {
         width: calc(100% - 20px);
     }
 }
 
 footer {
-    background-color:black;
+    background-color: black;
     color: white;
     padding: 20px 0;
 }
@@ -322,141 +236,134 @@ footer {
 }
 
 .footer-column {
-    flex: 1 1 300px; /* Adjust the flex properties for responsiveness */
+    flex: 1 1 300px;
     text-align: center;
-    margin-bottom: 20px; /* Add some space between columns */
+    margin-bottom: 20px;
 }
-.footer-column h2{
+
+.footer-column h2 {
     margin-bottom: -10px;
 }
+
 .footer-column h3 {
     margin-bottom: 10px;
 }
 
 .footer-column ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .footer-column ul li {
-    margin-bottom: 5px;
     margin: 10px;
 }
 
-.footer-column p {
-    margin: 5px 0;
-    color: #ccc;
-}
 .social-icons1 {
     display: flex;
-    justify-content: center; /* Center items horizontally */
+    justify-content: center;
     margin-top: 50px;
 }
 
 .social-icons1 li {
-    margin: 0 5px; /* Adjust margin between items */
+    margin: 0 5px;
 }
 
 .social-icons1 img {
     width: 30px;
     height: 30px;
-    transition: transform 0.3s ease; /* Add transition for hover effect */
+    transition: transform 0.3s ease;
 }
 
 .social-icons1 img:hover {
-    transform: scale(1.2); /* Add hover effect to scale up the icon */
+    transform: scale(1.2);
 }
-
 
 .social-icons {
     display: flex;
-    flex-direction: column; /* Display items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-icons li {
-    margin: 5px 0; /* Adjust margin between items */
+    margin: 5px 0;
 }
 
 .social-icons span {
-    margin-right: 5px; /* Add space between name and icon */
+    margin-right: 5px;
 }
-
 
 .social-icons img {
     width: 30px;
     height: 30px;
-    transition: transform 0.3s ease; /* Add transition for hover effect */
+    transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.2); /* Add hover effect to scale up the icon */
+    transform: scale(1.2);
 }
 
 .footer-column a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease; /* Add transition for hover effect */
+    transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
-    color: yellow; /* Change text color on hover */
+    color: yellow;
 }
-.footer-line1 {
-    width: 100%;
-    border-top: 1px solid #ccc; /* Adjust line style */
-    margin-top: 10px; /* Add space between footer and line */
-    margin-left: 30px;
-    margin-right: 30px;
-}
+
+.footer-line1,
 .footer-line2 {
     width: 100%;
-    border-top: 1px solid #ccc; /* Adjust line style */
-    margin-top: 100px; /* Add space between footer and line */
+    border-top: 1px solid #ccc;
+}
+
+.footer-line1 {
+    margin: 10px 30px;
+}
+
+.footer-line2 {
+    margin-top: 100px;
 }
 
 .footer-paragraph {
     text-align: center;
-    margin-top: 20px; /* Add space between line and paragraph */
-    color: white;
+    margin-top: 20px;
 }
-
-/* Existing CSS code */
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Align items vertically */
-    margin-top: 10px; /* Add space between paragraph and bottom content */
+    align-items: center;
+    margin-top: 10px;
 }
 
 .footer-bottom img {
-    max-width: 100px; /* Adjust logo size */
-    order: -5; /* Change the order of the logo to appear first */
+    max-width: 100px;
+    order: -5;
 }
 
 .footer-copyright {
-    font-size: 12px; /* Adjust font size */
-    color: #777; /* Adjust color */
-    margin-left: 900px; /* Push the copyright text to the right */
+    font-size: 12px;
+    color: #777;
+    margin-left: 900px;
     margin-top: -50px;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 700px) {
     .footer-bottom {
-        flex-direction: column; /* Change to column layout for smaller screens */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-bottom img {
-        order: 0; /* Reset the order to default */
-        margin-bottom: 10px; /* Add space between logo and copyright text */
+        order: 0;
+        margin-bottom: 10px;
         margin-left: 70px;
     }
 
     .footer-copyright {
-        margin-left: 10px; /* Reset the left margin */
-        margin-top: 10px; /* Add space between logo and copyright text */
+        margin-left: 10px;
+        margin-top: 10px;
     }
 }
