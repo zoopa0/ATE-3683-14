@@ -5,20 +5,18 @@ body {
     background: linear-gradient(to bottom, #000000, #ffe251);
 }
 
-
- 
 .logoAndNav {
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0px;
 }
 
 .logo img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
     margin-left: 55px;
     padding: 15px;
@@ -144,6 +142,7 @@ body {
         color: white;
     }
 }
+
 
 .container {
     display: flex;
